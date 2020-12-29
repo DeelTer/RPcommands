@@ -16,15 +16,20 @@ commands:
     radius: 100
     cooldown: 2
     display: "&a*&f%player% %message%&a*"
-    description: "&fПри выполнении команды показывает\nваше РП действие \n&f\n&7Кликните, чтобы выполнить \nкоманду /me"
+    description: "&fПри выполнении команды показывает\nваше РП действие в локальный чат \n&f\n&7Кликните, чтобы выполнить \nкоманду /me"
+  eme:
+    radius: -1
+    cooldown: 2
+    display: "&a*&f%player% %message%&a*"
+    description: "&fПри выполнении команды показывает\nваше РП действие в глобальный чат\n&f\n&7Кликните, чтобы выполнить \nкоманду /eme"
   do:
     radius: 100
-    cooldown: 3
+    cooldown: 2
     display: "&e*&f&o%player% %message%&e*"
     description: "&fПри выполнении команды описывает\nситуацию поблизости \n&f\n&7Кликните, чтобы выполнить\nкоманду /do"
   try:
     radius: 100
-    cooldown: 5
+    cooldown: 3
     display: "&6*&f%player% %message% [%try%&f]&6*"
     description: "&fПри выполнении команды показывает\nдействие с пометкой&a успешно&f или&c неуспешно \n&f\n&7Кликните, чтобы выполнить\nкоманду /try"
 
