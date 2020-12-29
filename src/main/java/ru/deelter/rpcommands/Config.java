@@ -10,10 +10,9 @@ public class Config {
 
     public static String CD_MESSAGE;
 
-    public static void reloadConfig(Main instance) {
-        instance.reloadConfig();
+    public static void reloadConfig() {
 
-        FileConfiguration config = instance.getConfig();
+        FileConfiguration config = Main.getInstance().getConfig();
         ConfigurationSection messages = config.getConfigurationSection("messages");
         CD_MESSAGE = Other.color(messages.getString("cooldown"));
 

@@ -70,12 +70,12 @@ public class Command extends BukkitCommand {
     }
 
     private String applyPlaceholders(Player player, String message, String display) {
-            String withPlaceholders = display;
-            String name = player.getName();
-            withPlaceholders = withPlaceholders.replaceAll("%player%", name).replaceAll("%message%", message);
+        String withPlaceholders = display;
+        String name = player.getName();
+        withPlaceholders = withPlaceholders.replaceAll("%player%", name).replaceAll("%message%", message);
 
-            String random = Math.random() < 0.5D ? "&aУспешно" : "&cНеуспешно";
-            withPlaceholders = withPlaceholders.replaceAll("%try%", random);
+        String random = Math.random() < 0.5D ? "&aУспешно" : "&cНеуспешно";
+        withPlaceholders = withPlaceholders.replaceAll("%try%", random);
 
         return withPlaceholders;
     }

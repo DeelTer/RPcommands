@@ -7,3 +7,15 @@ prefix: RPCommands
 authors: [ DeelTer ]
 description: rp commands for your server
 website: https://vk.com/deelter
+
+commands:
+  reload:
+    description: Reload config
+    permission: rpcommands.reload
+    permission-message: "You do not have permission!"
+    usage: /<command> <action>
+
+permissions:
+  rpcommands.reload:
+    description: Reload config
+    default: op
