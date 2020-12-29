@@ -10,6 +10,6 @@
 <div align="center">
   <h2>Commands</h2>
     <div align="left">
-      <p>● /rpcommands reload - Reload config <br>● /myrequest send <id> - Send a request by the prototype in the config <br>● /myrequest get <id - Get response about request</p>
+      <p>● /rpcommands reload - Reload config</p>
     </div>
 </div>
