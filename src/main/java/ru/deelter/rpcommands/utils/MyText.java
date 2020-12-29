@@ -24,7 +24,7 @@ public class MyText {
     }
 
     public void setSuggestCommand(String command) {
-        ClickEvent clickEvent = new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, command + " ");
+        ClickEvent clickEvent = new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "/" + command + " ");
         component.setClickEvent(clickEvent);
     }
 
