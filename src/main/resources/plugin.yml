@@ -9,7 +9,7 @@ description: rp commands for your server
 website: https://vk.com/deelter
 
 commands:
-  reload:
+  rpcommands:
     description: Reload config
     permission: rpcommands.reload
     permission-message: "You do not have permission!"
