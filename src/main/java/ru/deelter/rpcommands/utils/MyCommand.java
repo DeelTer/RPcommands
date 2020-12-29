@@ -8,7 +8,6 @@ public class MyCommand {
 
     private final String id, display, description;
 
-    private boolean hasRadius, hasCooldown;
     private long cooldown;
     private double radius;
 
@@ -20,12 +19,10 @@ public class MyCommand {
 
     /* Setters */
     public void setRadius(double radius) {
-        this.hasRadius = radius > 0;
         this.radius = radius;
     }
 
     public void setCooldown(long cooldown) {
-        this.hasCooldown = cooldown > 0;
         this.cooldown = cooldown * 20;
     }
 
@@ -52,11 +49,11 @@ public class MyCommand {
 
     /* Hassers? xd */
     public boolean hasRadius() {
-        return hasRadius;
+        return radius > 0;
     }
 
     public boolean hasCooldown() {
-        return hasCooldown;
+        return radius > 0;
     }
 
     public void register() {
