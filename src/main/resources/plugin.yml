@@ -1,0 +1,9 @@
+name: RPcommands
+version: ${project.version}
+main: ru.deelter.rpcommands.Main
+api-version: 1.16
+
+prefix: RPCommands
+authors: [ DeelTer ]
+description: rp commands for your server
+website: https://vk.com/deelter

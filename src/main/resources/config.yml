@@ -1,0 +1,32 @@
+####################################################
+#                                                  #
+#                  |   RP_COMMANDS |               #
+#                                                  #
+####################################################
+
+#Contact with me:
+#
+#VK: vk.com/deelter
+#DISCORD: DeelTer#4782
+#TWITTER: twitter.com/roma200315
+#YOUTUBE: www.youtube.com/channel/UCRACU2JfOfClrlEHImv5pYw
+
+commands:
+  me:
+    radius: 100
+    cooldown: 2
+    display: "&a*&f%player% %message%&a*"
+    description: "&fПри выполнении команды показывает\nваше РП действие \n&f\n&7Кликните, чтобы выполнить \nкоманду /me"
+  do:
+    radius: 100
+    cooldown: 3
+    display: "&e*&f&o%player% %message%&e*"
+    description: "&fПри выполнении команды описывает\nситуацию поблизости \n&f\n&7Кликните, чтобы выполнить\nкоманду /do"
+  try:
+    radius: 100
+    cooldown: 5
+    display: "&6*&f%player% %message% [%try%&f]&6*"
+    description: "&fПри выполнении команды показывает\nдействие с пометкой&a успешно&f или&c неуспешно \n&f\n&7Кликните, чтобы выполнить\nкоманду /try"
+
+messages:
+  cooldown: "&cВы не можете использовать эту команду так часто"
