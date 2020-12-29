@@ -1,5 +1,6 @@
 package ru.deelter.rpcommands;
 
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 
@@ -11,6 +12,7 @@ public class Config {
     public static String CD_MESSAGE;
 
     public static void reloadConfig() {
+        Main.getInstance().reloadConfig();
 
         FileConfiguration config = Main.getInstance().getConfig();
         ConfigurationSection messages = config.getConfigurationSection("messages");
@@ -18,6 +20,7 @@ public class Config {
 
         ConfigurationSection commands = config.getConfigurationSection("commands");
         for (String id : commands.getKeys(false)) {
+            Bukkit.getCommandMap().getKnownCommands().remove(id);
             ConfigurationSection command = commands.getConfigurationSection(id);
 
             String display = command.getString("display");

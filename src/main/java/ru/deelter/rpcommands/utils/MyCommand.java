@@ -51,7 +51,7 @@ public class MyCommand {
     }
 
     public boolean hasCooldown() {
-        return radius > 0;
+        return cooldown > 0;
     }
 
     public void register() {
