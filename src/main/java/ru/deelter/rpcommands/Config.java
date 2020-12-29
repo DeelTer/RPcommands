@@ -27,7 +27,7 @@ public class Config {
             double radius = command.getDouble("radius");
             myCommand.setRadius(radius);
 
-            long cooldown = command.getLong("cooldown");
+            double cooldown = command.getDouble("cooldown");
             myCommand.setCooldown(cooldown);
             myCommand.register();
         }

@@ -7,9 +7,7 @@ import ru.deelter.rpcommands.commands.Command;
 public class MyCommand {
 
     private final String id, display, description;
-
-    private long cooldown;
-    private double radius;
+    private double radius, cooldown;
 
     public MyCommand(String id, String display, String description) {
         this.id = id;
@@ -22,8 +20,8 @@ public class MyCommand {
         this.radius = radius;
     }
 
-    public void setCooldown(long cooldown) {
-        this.cooldown = cooldown * 20;
+    public void setCooldown(double cooldown) {
+        this.cooldown = cooldown;
     }
 
     /* Getters */
@@ -43,7 +41,7 @@ public class MyCommand {
         return radius;
     }
 
-    public long getCooldown() {
+    public double getCooldown() {
         return cooldown;
     }
 

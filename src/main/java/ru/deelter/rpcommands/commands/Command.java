@@ -62,8 +62,8 @@ public class Command extends BukkitCommand {
         if (myCommand.hasCooldown()) {
             cooldown.add(uuid);
 
-            long seconds = myCommand.getCooldown();
-            Bukkit.getScheduler().runTaskLaterAsynchronously(Main.getInstance(), () -> cooldown.remove(uuid), seconds);
+            long ticks = (long) myCommand.getCooldown();
+            Bukkit.getScheduler().runTaskLaterAsynchronously(Main.getInstance(), () -> cooldown.remove(uuid), ticks * 20L);
         }
 
         return true;
