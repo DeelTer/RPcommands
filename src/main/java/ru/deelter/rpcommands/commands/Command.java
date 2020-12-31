@@ -1,6 +1,7 @@
 package ru.deelter.rpcommands.commands;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.defaults.BukkitCommand;
 import org.bukkit.entity.Player;
@@ -44,8 +45,7 @@ public class Command extends BukkitCommand {
         String message = String.join(" ", args).trim();
 
         /* Removes the color from player message */
-        String stripMessage = Other.strip(message);
-        String finalMessage = applyPlaceholders(player, stripMessage, myCommand.getDisplay());
+        String finalMessage = applyPlaceholders(player, message, myCommand.getDisplay());
 
         MyText text = new MyText(finalMessage);
         text.setDescription(myCommand.getDescription());
@@ -71,12 +71,16 @@ public class Command extends BukkitCommand {
 
     private String applyPlaceholders(Player player, String message, String display) {
         String withPlaceholders = display;
-        String name = player.getName();
-        withPlaceholders = withPlaceholders.replaceAll("%player%", name).replaceAll("%message%", message);
 
-        String random = Math.random() < 0.5D ? "&aУспешно" : "&cНеуспешно";
-        withPlaceholders = withPlaceholders.replaceAll("%try%", random);
+        String name = player.getName();
+        String stripMessage = Other.strip(message);
+        withPlaceholders = withPlaceholders.replaceAll("%player%", name).replaceAll("%message%", stripMessage).replaceAll("%try%", getRandomResult());
 
         return withPlaceholders;
+    }
+
+    private String getRandomResult() {
+        String random = Math.random() < 0.5D ? "&aУспешно" : "&cНеуспешно";
+        return Other.color(random);
     }
 }

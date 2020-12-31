@@ -13,7 +13,7 @@ public class MyText {
 
     public MyText(String text) {
         String colorText = Other.color(text);
-        this.component = new TextComponent(colorText);
+        this.component = new TextComponent(text);
     }
 
 

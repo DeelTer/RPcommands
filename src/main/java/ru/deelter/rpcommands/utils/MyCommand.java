@@ -11,8 +11,8 @@ public class MyCommand {
 
     public MyCommand(String id, String display, String description) {
         this.id = id;
-        this.display = display;
-        this.description = description;
+        this.display = Other.color(display);
+        this.description = Other.color(description);
     }
 
     /* Setters */
