@@ -10,14 +10,13 @@ public class RpCommands implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (args.length < 1 && args[0] == null)
+        if (args.length < 1)
             return true;
 
         if (args[0].equalsIgnoreCase("reload")) {
             sender.sendMessage("Reload configuration");
             Config.reloadConfig();
         }
-
         return true;
     }
 }
