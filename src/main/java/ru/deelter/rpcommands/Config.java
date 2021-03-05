@@ -10,13 +10,20 @@ import ru.deelter.rpcommands.utils.Other;
 public class Config {
 
     public static String CD_MESSAGE;
+    public static String RELOAD_MESSAGE;
+
+    public static String RELOAD_PERM;
 
     public static void reloadConfig() {
-        Main.getInstance().reloadConfig();
+        RpCommands.getInstance().reloadConfig();
 
-        FileConfiguration config = Main.getInstance().getConfig();
+        FileConfiguration config = RpCommands.getInstance().getConfig();
         ConfigurationSection messages = config.getConfigurationSection("messages");
         CD_MESSAGE = Other.color(messages.getString("cooldown"));
+        RELOAD_MESSAGE = Other.color(messages.getString("permission"));
+
+        ConfigurationSection permissions = config.getConfigurationSection("permissions");
+        RELOAD_PERM = permissions.getString("reload");
 
         ConfigurationSection commands = config.getConfigurationSection("commands");
         for (String id : commands.getKeys(false)) {

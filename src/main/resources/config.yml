@@ -33,5 +33,9 @@ commands:
     display: "&6*&f%player% %message% [%try%&f]&6*"
     description: "&fПри выполнении команды показывает\nдействие с пометкой&a успешно&f или&c неуспешно \n&f\n&7Кликните, чтобы выполнить\nкоманду /try"
 
+permissions:
+  reload: "rpcommands.reload"
+
 messages:
   cooldown: "&cВы не можете использовать эту команду так часто"
+  permission: "&cНет прав"

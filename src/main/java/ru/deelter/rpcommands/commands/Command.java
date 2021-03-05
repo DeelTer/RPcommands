@@ -1,13 +1,12 @@
 package ru.deelter.rpcommands.commands;
 
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.defaults.BukkitCommand;
 import org.bukkit.entity.Player;
 
 import ru.deelter.rpcommands.Config;
-import ru.deelter.rpcommands.Main;
+import ru.deelter.rpcommands.RpCommands;
 import ru.deelter.rpcommands.utils.MyCommand;
 import ru.deelter.rpcommands.utils.MyText;
 import ru.deelter.rpcommands.utils.Other;
@@ -63,7 +62,7 @@ public class Command extends BukkitCommand {
             cooldown.add(uuid);
 
             long ticks = (long) myCommand.getCooldown();
-            Bukkit.getScheduler().runTaskLaterAsynchronously(Main.getInstance(), () -> cooldown.remove(uuid), ticks * 20L);
+            Bukkit.getScheduler().runTaskLaterAsynchronously(RpCommands.getInstance(), () -> cooldown.remove(uuid), ticks * 20L);
         }
 
         return true;

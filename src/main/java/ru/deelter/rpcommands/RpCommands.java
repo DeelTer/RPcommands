@@ -3,11 +3,11 @@ package ru.deelter.rpcommands;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import ru.deelter.rpcommands.commands.RpCommands;
+import ru.deelter.rpcommands.commands.CustomCommand;
 
 import java.io.File;
 
-public final class Main extends JavaPlugin {
+public final class RpCommands extends JavaPlugin {
 
     private static JavaPlugin instance;
 
@@ -24,7 +24,7 @@ public final class Main extends JavaPlugin {
             saveDefaultConfig();
 
         Config.reloadConfig();
-        getCommand("rpcommands").setExecutor(new RpCommands());
+        getCommand("rpcommands").setExecutor(new CustomCommand());
     }
 
     @Override

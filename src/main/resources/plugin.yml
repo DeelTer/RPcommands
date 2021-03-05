@@ -1,6 +1,6 @@
 name: RPcommands
 version: ${project.version}
-main: ru.deelter.rpcommands.Main
+main: ru.deelter.rpcommands.RpCommands
 api-version: 1.16
 
 prefix: RPCommands
@@ -11,11 +11,4 @@ website: https://vk.com/deelter
 commands:
   rpcommands:
     description: Reload config
-    permission: rpcommands.reload
-    permission-message: "You do not have permission!"
     usage: /<command> <action>
-
-permissions:
-  rpcommands.reload:
-    description: Reload config
-    default: op

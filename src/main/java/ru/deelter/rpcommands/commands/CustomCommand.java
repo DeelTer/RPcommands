@@ -6,10 +6,15 @@ import org.bukkit.command.CommandSender;
 
 import ru.deelter.rpcommands.Config;
 
-public class RpCommands implements CommandExecutor {
+public class CustomCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        if (!sender.hasPermission(Config.RELOAD_PERM)) {
+            sender.sendMessage(Config.RELOAD_MESSAGE);
+            return true;
+        }
+
         if (args.length < 1)
             return true;
 

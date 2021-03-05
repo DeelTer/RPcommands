@@ -6,10 +6,10 @@
 
     <groupId>ru.deelter</groupId>
     <artifactId>RPcommands</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
     <packaging>jar</packaging>
 
-    <name>RPcommands</name>
+    <name>RPCommands</name>
 
     <description>rp commands for your server</description>
     <properties>
